@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ICT platform supporting IT and Business Analysis students." />
+  <title>ICT Industry – BA Learning Portal</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- === Quick Tour Modal === -->
+<div id="tourModal" role="dialog" aria-labelledby="tourTitle" aria-hidden="true">
+    <div class="tour-box">
+      <h2 id="tourTitle">💡 Quick Start Guide</h2>
+      <ul>
+        <li>🔍 Use the <strong>Search Bar</strong> to find features quickly.</li>
+        <li>📂 <strong>Upload files</strong> via Toolkit to simulate requirement gathering.</li>
+        <li>💬 Click the chat icon to get help from the <strong>BA Helper Bot</strong>.</li>
+        <li>📌 <strong>Reorder your badges</strong> in the Progress Tracker by dragging them.</li>
+        <li>🎯 Watch your <strong>Progress Bar</strong> update automatically!</li>
+      </ul>
+      <button id="closeTour">Got it!</button>
+    </div>
+  </div>
+  
+  <!-- Help / Tour Icon -->
+<button id="helpToggle" aria-label="Open help guide">❔</button>
+
+<body class="background-img">
+  <header>
+    <h1>The ICT Industry</h1>
+    <h2>Strengthening Skills &amp; Team Collaboration</h2>
+    <form id="searchForm">
+      <input type="text" id="searchInput" placeholder="Search…" />
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main>
+    <!-- ===== INTRO ===== -->
+    <section id="intro" class="section">
+      <h2>Welcome to the BA Learning Portal</h2>
+      <p>This platform bridges the gap between academic learning and professional practice for IT students specialising in Business Analysis. Explore real-world scenarios, practical tools and collaborative features that simulate an industry environment.</p>
+    </section>
+
+    <!-- ===== MISSION ===== -->
+    <section id="mission" class="section">
+      <h2>Our Mission</h2>
+      <p>To equip aspiring Business Analysts with resources, methodologies and practical experience through structured learning tools, interactive case studies and collaborative project spaces.</p>
+    </section>
+
+    <!-- ===== TOOLS NAV ===== -->
+    <section id="tools" class="section">
+      <h2>Explore the Tools</h2>
+      <ul>
+        <li><a href="#caseSection">Interactive Case Study Repository</a></li>
+        <li><a href="#toolkitSection">Requirements Toolkit</a></li>
+        <li><a href="#collabSection">Collaboration Hub</a></li>
+        <li><a href="#progressSection">Progress Tracker</a></li>
+      </ul>
+    </section>
+
+    <!-- ===== CASE STUDIES ===== -->
+    <section id="caseSection" class="section">
+      <h2>Interactive Case Study Repository</h2>
+      <p>Analyse data sets from finance, retail and healthcare, sharpen critical-thinking and discover emerging trends.</p>
+    </section>
+
+    <!-- ===== TOOLKIT ===== -->
+    <section id="toolkitSection" class="section">
+      <h2>Requirements Toolkit</h2>
+      <p><a href="docs/BA-Requirements-Template.pdf" download>📄 Download Requirements Template (PDF)</a></p>
+
+      <p>Download templates, interview guides and check-lists; upload your requirement drafts for feedback.</p>
+      <input type="file" accept=".pdf,.docx,.txt" />
+    </section>
+
+    <!-- ===== COLLAB HUB ===== -->
+    <section id="collabSection" class="section">
+      <h2>Collaboration Hub</h2>
+      <textarea placeholder="Share a BA tip or ask a question…"></textarea>
+      <button>Post</button>
+    </section>
+
+    <!-- === Chatbot Floating Button & Modal === -->
+<button id="chatToggle" aria-label="Open chatbot">💬</button>
+
+<div id="chatModal" role="dialog" aria-labelledby="chatTitle" aria-hidden="true">
+  <div class="chat-window">
+    <h3 id="chatTitle">BA Helper Bot</h3>
+    <div id="chatLog" class="chat-log">
+      <p class="bot">Hi! Ask me about case studies, requirements, or progress tracking.</p>
+    </div>
+    <form id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type your question…" autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+    <!-- ===== PROGRESS ===== -->
+    <section id="progressSection" class="section">
+        <h2>Progress Tracker</h2>
+ 
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span id="progressFill" style="width: 0%">0% Complete</span>
+          </div>
+          <div class="file-upload">
+            <input type="file" id="reqFile" aria-label="Upload requirement document" />
+            <label for="reqFile" tabindex="0">📂 Browse…</label>
+            <span id="fileName" aria-live="polite"></span>
+          </div> 
+          
+        <!-- Drag-and-Drop Badges -->
+        <p class="sr-only" id="badgeDesc">Drag badges to re-order your achievements.</p>
+        <ul id="badgeBoard" aria-labelledby="badgeDesc">
+          <li draggable="true" tabindex="0">✅ First Case Study</li>
+          <li draggable="true" tabindex="0">✅ Submitted Requirements</li>
+          <li draggable="true" tabindex="0">🔄 Joined Discussion</li>
+          <li draggable="true" tabindex="0">⏳ Viewed Toolkit Templates</li>
+        </ul>
+    </section>    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BA Learning Portal. All rights reserved.</p>
+    <p id="datetime"></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
