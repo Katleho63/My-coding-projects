@@ -27,12 +27,7 @@ Each project demonstrates creativity, problem-solving, and usability design prin
 - Coursework-based websites demonstrating core web design principles.  
 - Includes responsive layouts, navigation design, and use of forms and media.  
 
-### 3. **Downlow Construction & Projects Website**
-- Real-world client project built using HTML, CSS, and JavaScript.  
-- Features service pages, image gallery, contact form, and company info.  
-- Designed to improve visibility and client communication.
-
-### 4. **Other Exercises**
+### 3. **Other Exercises**
 - Landing pages, navigation menus, and page styling experiments.  
 - Practice projects focused on improving structure, UX/UI, and responsiveness.
 
@@ -45,6 +40,3 @@ Each project demonstrates creativity, problem-solving, and usability design prin
 - **Canva / Figma** (for HCI prototyping visuals)
 
 ---
-
-## 📁 Folder Structure
-
